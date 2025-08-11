@@ -1,62 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <h1>My Portfolio</h1>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- NAV -->
+    <nav class="nav">
+      <a class="logo" href="#">Dimple</a>
+      <div class="nav-right">
+        <button
+          id="theme-toggle"
+          aria-label="Toggle dark mode"
+          class="theme-btn"
+        >
+          🌙
+        </button>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link btn">Contact</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-inner container">
+        <div class="hero-left">
+          <h1 class="hero-title">Hi, I'm <span class="accent">Dimple</span></h1>
+          <h2 class="hero-sub" id="typewriter"></h2>
+          <p class="hero-desc">
+            I build clean, creative websites and web apps — focused on
+            performance and delightful UX.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">See My Work</a>
+            <a class="btn ghost" href="#about">About Me</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="card profile-card reveal">
+            <img
+              src="images/profile.jpg"
+              alt="Your profile"
+              class="profile-pic"
+            />
+            <div class="card-body">
+              <h3>Your Name</h3>
+              <p>Front-end developer · UX enthusiast</p>
+              <div class="socials">
+                <a href="#" aria-label="GitHub">GH</a>
+                <a href="#" aria-label="LinkedIn">in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="animated-bg" aria-hidden="true"></div>
     </header>
 
-    <section id="home">
-      <h2>Hi, I'm <span>Dimple</span> 👋</h2>
-      <p>
-        Welcome to my portfolio website. I create modern, responsive websites
-        and applications.
-      </p>
-    </section>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a passionate web developer with skills in HTML, CSS, and
-        JavaScript. I love creating interactive and user-friendly websites.
-      </p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Eco Track</h3>
-        <p>A Eco environment action tracker</p>
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a web developer who loves crafting fast, accessible, and
+            beautiful user experiences. I work mainly with HTML, CSS and
+            JavaScript, and I enjoy learning new tools and techniques to bring
+            ideas to life.
+          </p>
+          <ul class="info-list">
+            <li><strong>Location:</strong> Udaipur, Rajasthan</li>
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:you@example.com">dimple@gmail.com</a>
+            </li>
+            <li>
+              <strong>Availability:</strong> Open for freelance & full-time
+            </li>
+          </ul>
+        </div>
+        <div class="skills reveal">
+          <h3>Skills</h3>
+          <div class="skill">
+            <label>HTML</label>
+            <div class="progress"><span data-value="90"></span></div>
+          </div>
+          <div class="skill">
+            <label>CSS</label>
+            <div class="progress"><span data-value="85"></span></div>
+          </div>
+          <div class="skill">
+            <label>JavaScript</label>
+            <div class="progress"><span data-value="75"></span></div>
+          </div>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>HelathyLife clinic</h3>
-        <p>A website for Doctor Appointment</p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-thumb"></div>
+          <div class="project-body">
+            <h3>EcoLog</h3>
+            <p>Log Small environment actions and get rewarded</p>
+            <div class="project-links">
+              <a href="https://github.com/digvijaya06/EcoTrack">EcoTrack</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb"></div>
+          <div class="project-body">
+            <h3>Mern Product app</h3>
+            <p>A product app made with MERN stack</p>
+            <div class="project-links">
+              <a href="https://github.com/digvijaya06/mern-product-app"
+                >Product App</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-thumb"></div>
+          <div class="project-body">
+            <h3>Books-api</h3>
+            <p>Short description — data, visuals, or performance wins.</p>
+            <div class="project-links">
+              <a href="https://github.com/digvijaya06/Books-api">REST API</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: yourname@example.com</p>
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-grid">
+        <form
+          class="contact-form reveal"
+          onsubmit="event.preventDefault(); alert('Thanks — form is demo-only.');"
+        >
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <textarea placeholder="Message" rows="6" required></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+        <div class="contact-info reveal">
+          <h3>Say hello</h3>
+          <p>
+            If you'd like to work together, email me at
+            <a href="mailto:you@example.com">you@example.com</a> or connect on
+            LinkedIn.
+          </p>
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> +91 98765 43210</li>
+            <li><strong>Location:</strong> Your City</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <p>© 2025 Dimple Nagda | Built with ❤️</p>
-      <p id="date-time"></p>
+    <footer class="footer">
+      <p>© <span id="year"></span> Dimple — Built with ❤️</p>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
