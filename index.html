@@ -3,38 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to My Site</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Hello, World! 🌍</h1>
-      <p>Welcome to my GitHub Pages site.</p>
-      <p id="date-time"></p>
+      <nav>
+        <h1>My Portfolio</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-      <section>
-        <h2>About This Page</h2>
-        <p>
-          This is a simple static site hosted on <strong>GitHub Pages</strong>.
-          You can edit it anytime by changing these files and pushing updates to
-          GitHub.
-        </p>
-      </section>
+    <section id="home">
+      <h2>Hi, I'm <span>Dimple</span> 👋</h2>
+      <p>
+        Welcome to my portfolio website. I create modern, responsive websites
+        and applications.
+      </p>
+    </section>
 
-      <section>
-        <h2>Get Started</h2>
-        <ul>
-          <li>Edit <code>index.html</code> to customize your homepage.</li>
-          <li>Add more HTML pages and link them here.</li>
-          <li>Use <code>style.css</code> to change the design.</li>
-        </ul>
-      </section>
-    </main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate web developer with skills in HTML, CSS, and
+        JavaScript. I love creating interactive and user-friendly websites.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Eco Track</h3>
+        <p>A Eco environment action tracker</p>
+      </div>
+      <div class="project-card">
+        <h3>HelathyLife clinic</h3>
+        <p>A website for Doctor Appointment</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: yourname@example.com</p>
+    </section>
 
     <footer>
-      <p>© 2025 Digvijaya — Powered by GitHub Pages</p>
+      <p>© 2025 Dimple Nagda | Built with ❤️</p>
+      <p id="date-time"></p>
     </footer>
 
     <script src="script.js"></script>
